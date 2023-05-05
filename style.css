@@ -46,12 +46,10 @@ table tr td:last-child {
 
 .endgame {
   display: none;
-  width: 80%;
-  height: 75%;
+  width:100%;
+  height: 100%;
   background-color: #174873;
   position: absolute;
-  left: 10%;
-  top: 10%;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
@@ -62,12 +60,10 @@ table tr td:last-child {
 
 .selectSym{
   display: none;
-  width: 80%;
-  height: 75%;
+  width: 100%;
+  height: 100%;
   background-color: #174873;
   position: absolute;
-  left: 10%;
-  top: 10%;
   padding-top: 10px;
   padding-bottom: 50px;
   text-align: center;
