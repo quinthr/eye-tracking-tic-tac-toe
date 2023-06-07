@@ -1,6 +1,7 @@
 let origBoard;
 let huPlayer ='O';
 let aiPlayer = 'X';
+let canCallFunction = true;
 const winCombos =[
   [0, 1, 2],
   [3, 4, 5],
@@ -39,11 +40,19 @@ function startGame() {
 }
 
 function turnClick(square) {
+  if (!canCallFunction) {
+    return;
+  }
   if (typeof origBoard[square.target.id] ==='number') {
     turn(square.target.id, huPlayer);
     if (!checkWin(origBoard, huPlayer) && !checkTie())  
       turn(bestSpot(), aiPlayer);
   }
+  canCallFunction = false;
+
+  setTimeout(function() {
+    canCallFunction = true;
+  }, 2000);
 }
 
 function turn(squareId, player) {
