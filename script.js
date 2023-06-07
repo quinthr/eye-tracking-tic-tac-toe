@@ -52,7 +52,8 @@ function turnClick(square) {
 
   setTimeout(function() {
     canCallFunction = true;
-  }, 2000);
+    console.log('Can click now');
+  }, 3000);
 }
 
 function turn(squareId, player) {
